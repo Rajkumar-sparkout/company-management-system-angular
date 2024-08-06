@@ -1,0 +1,57 @@
+@import "src/styles.scss";
+.navbar{
+    background-color: #016078;
+    height: 5vh;
+}
+.navbar-text{
+    font: {
+        size: 13px;
+        family: "Montserrat", sans-serif;
+    }
+}
+.icons{
+    color: #bad6de;
+}
+.contact{
+    padding-left: 12.5%;
+}
+.icon{
+    padding-right: 13%;
+}
+
+@media screen and (max-width: 1190px){
+    .contact{
+        padding-left: 13%;
+    }
+}
+@media screen and (max-width: 1280px){
+    .contact{
+        padding-left: 4%;
+    }
+    .icon{
+        padding-right: 4%;
+    }
+}
+
+//media query for height
+
+@media screen and (max-height: 636px){
+    .navbar{
+        height: 6vh;
+    }
+}
+@media screen and (max-height: 580px){
+    .navbar{
+        height: 7vh;
+    }
+}
+@media screen and (max-height: 500px){
+    .navbar{
+      height: 8vh;
+    }
+}
+@media screen and (max-height: 424px){
+    .navbar{
+      height: 9vh;
+    }
+}

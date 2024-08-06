@@ -1,0 +1,50 @@
+@import "src/styles.scss";
+
+.container{
+    padding-top: 5%;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+}
+img{
+    border-radius: 4%;
+}
+.fw-bold{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+    font-size: 16px;
+    font-weight: 350;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.right{
+    padding-left: 3%;
+}
+.image{
+    width: 90%;
+}
+
+
+
+@media screen and (max-width: 991px){
+    .flex{
+        display: block;
+    }
+    .w-50{
+        width: 100%!important;
+    }
+    .image{
+        width: 100%;
+    }
+    .container{
+        max-width: 800px;
+        padding-top: 13%;
+    }
+}
+@media screen and (max-width: 575px){
+    .container{
+        padding-top: 25%;
+    }
+}

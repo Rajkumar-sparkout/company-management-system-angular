@@ -1,0 +1,354 @@
+<!-- <div *ngIf="registrationForm">
+  <div class="container pt-5 mb-5" id="card">
+    <nav class="navbar navbar-info p-3">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+      <h4 class="text-light text-center fs-5 mt-2">Register Here</h4>
+    </nav>
+<mat-card class="cardbot">
+  <form class="example-form text-center " [formGroup]="signupForm">
+    <div class="row px-5 pt-3">
+      <div class="col-xl-5 col-lg-6">
+         <i class="bi bi-person-circle ps-1 green"></i>
+         <mat-form-field class="field pb-2 pt-4">
+         <mat-label class="ps-1"> First name</mat-label>
+         <input matInput type="name" class="placehold" placeholder="first name" formControlName="firstName">
+        </mat-form-field> 
+      </div>
+      <div class="col-xl-5 col-lg-6">
+        <i class="bi bi-person-circle ps-1 yellow"></i>
+        <mat-form-field class="field pb-2 pt-4">
+        <mat-label class="ps-1"> Last name</mat-label>
+        <input type="name" matInput class="placehold" placeholder="last name" formControlName="lastName">
+      </mat-form-field>
+    </div>
+    </div>
+
+    <div class="row px-5">
+      <div class="col-xl-5 col-lg-6">
+        <i class="bi bi-envelope  ps-2 red"></i>
+        <mat-form-field class="field pb-2 pt-4"> 
+         <mat-label class="ps-1"> Email</mat-label>
+         <input type="email" matInput class="placehold" placeholder="email" formControlName="email">
+        </mat-form-field>
+    </div>
+    <div class="col-xl-5 col-lg-6">
+      <i class="bi bi-phone  pe-2 blue"></i>
+        <mat-form-field class="field pb-2 pt-4">
+         <mat-label class="ps-1"> Mobile Number</mat-label>
+         <input type="number" matInput class="placehold" placeholder="mobile number" formControlName="mobileNumber">
+        </mat-form-field>
+    </div>
+    </div>
+
+    <div class="row px-5">
+      <div class="col-xl-5 col-lg-6">
+        <i class="bi bi-geo-alt-fill"></i>
+        <mat-form-field class="field pb-2 pt-4"> 
+         <mat-label class="ps-1"> Address</mat-label>
+         <input type="textarea" matInput class="placehold" placeholder="address" formControlName="address">
+        </mat-form-field>
+    </div>
+      <div class="col-xl-5 col-lg-6">
+        <i class="bi bi-geo-alt"></i>
+        <mat-form-field class="field pb-2 pt-4"> 
+         <mat-label class="ps-1"> City</mat-label>
+         <input type="name" matInput class="placehold" placeholder="city" formControlName="city">
+        </mat-form-field>
+    </div>
+    </div>
+
+    <div class="row px-5">
+    <div class="col-xl-5 col-lg-6">
+      <i class="bi bi-geo-alt"></i>
+      <mat-form-field  class="field pb-2 pt-4">
+        <mat-label>State</mat-label>
+        <mat-select class="placehold" formControlName="state">
+          <mat-option *ngFor="let state of listOfStates"
+          [value]="state.state_id">{{ state.name }}
+          </mat-option>
+      </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-xl-5 col-lg-6">
+      <i class="bi bi-geo-alt-fill"></i>
+      <mat-form-field  class="field pb-2 pt-4">
+        <mat-label>District</mat-label>
+        <mat-select class="placehold" formControlName="district" (click)="getDistricts()">
+          <mat-option *ngFor="let district of listOfDistricts"
+          [value]="district.district_id">{{ district.district }}
+          </mat-option>
+      </mat-select>
+      </mat-form-field>
+    </div>
+    </div>
+
+    <div class="row px-5">
+      <div class="col-xl-5 col-lg-6">
+        <img src="assets/images/pincode.jpg" class="pincode ps-2" alt="">
+          <mat-form-field class="field pb-2 pt-4 ">
+           <mat-label class="ps-1"> Zipcode</mat-label>
+           <input type="name" matInput class="placehold" placeholder="pincode" formControlName="zipCode">
+          </mat-form-field>
+      </div>
+      <div class="col-xl-5 col-lg-6">
+        <div class="pb-3 captcha pt-2">
+          <ngx-recaptcha2 [siteKey]="siteKey" [type]="type" formControlName="captcha"></ngx-recaptcha2>
+        </div>
+      </div>
+    </div>
+    <button class="ms-2 btn" mat-raised-button [disabled]="signupForm.invalid" (click)="generateOTP()">GenerateOTP</button>
+
+        
+        <div class="mt-2 mb-2" *ngIf="mobileNumberExist">
+          <p [style.color]="messageColor">{{mobileNumberExistMessage}}</p>
+        </div>
+   </form>
+</mat-card>
+</div>
+</div> -->
+
+
+<div *ngIf="registrationForm">
+    <div class="pt-4 pb-4" id="card">
+      <nav class="navbar navbar-info p-3">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+          </a>
+        </div>
+        <h6 class="text-center fs-6 text-light mt-2">Company Registration Form</h6>
+      </nav>
+  <mat-card class="cardbot">
+    <form class="example-form text-center " [formGroup]="signupForm">
+      <div class="row px-3 pt-3">
+        <div class="col-xl-6 col-lg-6">
+          <mat-label class="label"> Company Name</mat-label>
+           <mat-form-field class="field mt-4" appearance="outline">
+           <input matInput type="name" class="placehold" formControlName="companyName">
+          </mat-form-field> 
+        </div>
+        <div class="col-xl-6 col-lg-6">
+          <mat-label class="label">Owner Fullname</mat-label> 
+          <mat-form-field class="field mt-4" appearance="outline">
+          <input type="name" matInput class="placehold" formControlName="owner">
+        </mat-form-field>
+      </div>
+      </div>
+  
+      <div class="row px-3">
+        <div class="col-sm-12 col-lg-12">
+          <mat-label class="label"> Company Mailing Address</mat-label>
+          <mat-form-field class="field mt-4" appearance="outline"> 
+           <input type="name" matInput class="placehold" placeholder="Street Address" formControlName="address">
+          </mat-form-field>
+       </div>
+      </div>
+  
+      <div class="row px-3">
+        <div class="col-xl-6 col-lg-6">
+          <mat-form-field class="field" appearance="outline"> 
+           <input type="name" matInput class="placehold" placeholder="City" formControlName="city">
+          </mat-form-field>
+      </div>
+        <div class="col-xl-6 col-lg-6">
+          <mat-form-field  class="field" appearance="outline">
+            <mat-select class="placehold" placeholder="Country" formControlName="country">
+              <mat-option *ngFor="let country of listOfCountries"
+              [value]="country.country_code">{{ country.country }}
+              </mat-option>
+          </mat-select>
+          </mat-form-field>
+      </div>
+      </div>
+  
+      <div class="row px-3">
+        <div class="col-xl-6 col-lg-6">
+          <mat-form-field  class="field" appearance="outline">
+            <mat-select class="placehold" placeholder="State" formControlName="state" (click)="getStatesByCountry()">
+              <mat-option *ngFor="let state of listOfStates"
+              [value]="state.state_code">{{ state.state }}
+              </mat-option>
+          </mat-select>
+          </mat-form-field>
+      </div>
+        <div class="col-xl-6 col-lg-6">
+          <mat-form-field class="field" appearance="outline"> 
+            <input type="name" matInput class="placehold" placeholder="Zip Code" formControlName="zipCode">
+          </mat-form-field>
+      </div>
+      </div>
+  
+      <div class="row px-3">
+        <div class="col-xl-6 col-lg-6">
+          <mat-label class="label"> Email</mat-label>
+          <mat-form-field class="field mt-4" appearance="outline"> 
+           <input type="name" matInput class="placehold" formControlName="email">
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+          <mat-label class="label"> Phone Number</mat-label>
+          <mat-form-field class="field mt-4" appearance="outline"> 
+           <input type="name" matInput class="placehold" formControlName="mobileNumber" (keypress)="messageRemoveEvent()">
+          </mat-form-field>
+        </div>
+      </div> 
+      <button class="next" mat-raised-button (click)="next()">Next</button>
+    </form>
+  </mat-card>
+</div>
+</div>
+
+<div *ngIf="registrationFormSecond">
+  <div class="pt-5 pb-5" id="card">
+    <nav class="navbar navbar-info p-3">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        </a>
+      </div>
+      <h6 class="text-center fs-6 text-light mt-2">Company Registration Form</h6>
+    </nav>
+<mat-card class="cardbot">
+  <form class="example-form text-center " [formGroup]="signupForm">
+    <div class="row pt-3 px-3">
+      <div class="col-sm-12 col-lg-12">
+        <mat-label class="label"> Tag</mat-label>
+        <mat-form-field class="field mt-4" appearance="outline"> 
+         <input type="name" matInput class="placehold" placeholder="Tag" formControlName="tag">
+        </mat-form-field>
+     </div>
+    </div>
+
+    <div class="row px-3">
+      <div class="col-xl-6 col-lg-6">
+        <mat-label class="label">Industry</mat-label>
+        <mat-form-field  class="field mt-4" appearance="outline">
+          <mat-select class="placehold" placeholder="Industry" formControlName="industry">
+            <mat-option *ngFor="let industry of listOfIndustries"
+            [value]="industry.id">{{ industry.industry }}
+            </mat-option>
+        </mat-select>
+        </mat-form-field>
+    </div>
+      <div class="col-xl-6 col-lg-6">
+        <mat-label class="label"> Website</mat-label>
+        <mat-form-field class="field mt-4" appearance="outline"> 
+         <input type="name" matInput class="placehold" formControlName="website">
+        </mat-form-field>
+    </div>
+    </div>
+
+    <div class="row px-3">
+      <div class="col-sm-12 col-lg-12">
+        <mat-label class="label"> Company Description</mat-label>
+        <mat-form-field class="field mt-4" appearance="outline"> 
+         <textarea type="name" matInput class="placehold" formControlName="companyDescription"></textarea>
+        </mat-form-field>
+     </div>
+    </div>
+
+    <div class="flex px-3">
+      <div class="col-xl-6 col-lg-6">
+        <div class="captcha pt-2">
+          <ngx-recaptcha2 [siteKey]="siteKey" [type]="type" formControlName="captcha"></ngx-recaptcha2>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6">
+        <div class="mt-2 mb-2" *ngIf="mobileNumberExist">
+          <p [style.color]="messageColor">{{mobileNumberExistMessage}}</p>
+        </div>
+        <button class="btn mt-2" mat-raised-button [disabled]="signupForm.invalid" (click)="generateOTP()">GenerateOTP</button>
+      </div>
+    </div>
+  </form>
+</mat-card>
+</div>
+</div>
+  
+  
+  
+  
+  <!-- password form section -->
+  <div *ngIf="otpForm">
+    <section class="py-5 mt-3 mb-3">
+      <div id="second">
+        <nav class="navbar navbar-info p-3">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+            </a>
+          </div>
+          <h5 class="text-light text-center fs-5 mt-2">Register Here</h5>
+        </nav>
+    <mat-card class="cardbot">
+      <form class="example-form text-center" [formGroup]="passwordForm">
+        <h6 class="fs-6">OTP has been sent your mobile number and it will be expired in 5 minutes</h6>
+        <div class="my-3">
+        </div>
+        <div class="row px-2  pt-3 pb-2">
+          <div class="col-xl-6 col-lg-6">
+            <div>
+              <i class="bi bi-123" [style.color]="otpIcon"></i>
+              <mat-form-field class="field pt-4" appearance="outline">
+                <mat-label>OTP</mat-label>
+                <input  matInput placeholder="OTP number" formControlName="otpNumber" (keypress)="otpExpiredMethod()">
+              </mat-form-field>
+            </div>
+            <div>
+              <i class="bi bi-key" [style.color]="createPasswordIcon"></i>
+              <mat-form-field class="field pt-4" appearance="outline">
+                <mat-label>Create Password</mat-label>
+                <input matInput type="password" placeholder="Create Password"
+                  (input)="checkConfirmPassword()" formControlName="createPassword">
+              </mat-form-field>
+            </div>
+            <div>
+              <i class="bi bi-key-fill" [style.color]="confirmPasswordIcon"></i>
+              <mat-form-field class="field pt-4" appearance="outline">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput type="password" placeholder="Confirm Password"
+                (input)="checkConfirmPassword()" formControlName="confirmPassword" [style.color]="color">
+              </mat-form-field>
+            </div>
+          </div>
+  
+          <div class="col-xl-6 col-lg-6">
+            <div class="paragraph pt-4 pb-2" *ngIf="regenerateOTPButton">
+              <button class="mb-1 otpButton" mat-raised-button (click)="regenerateOTP()">Regenerate OTP</button>
+            </div>
+    
+            <div class="paragraph mt-4">
+              <ul>
+                <p class="fw-bold">
+                  A strong password Should be:
+                </p>
+                <p class="fw-500">
+                  <mat-icon color="primary">done</mat-icon>
+                  At least 8 characters long but 14 or more is
+                  better.
+                  </p>
+                <p>
+                  <mat-icon color="primary">done</mat-icon>
+                  A combination of uppercase letters, lowercase
+                  letters, numbers, and symbols.
+                  </p>
+              </ul>
+            </div>
+            <div class="paragraph pt-2" *ngIf="message" [style.color]="messageColor">
+              <p class="ms-4"> {{responseMessage}}</p>
+            </div>
+            <div class="rowreg mt-4">
+              <div class="left">
+                <button class="mb-3 register" mat-raised-button [disabled]="passwordForm.invalid" (click)="createCmsysUser()">Register</button>
+              </div>
+              <div class="right">
+                <button class="mb-3 back" mat-raised-button (click)="backToRegistration()">Back</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </form>
+    </mat-card>
+    </div>
+    </section>
+    </div>

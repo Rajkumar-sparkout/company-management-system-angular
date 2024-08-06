@@ -1,0 +1,281 @@
+@import "src/styles.scss"; 
+
+.cardbot{
+    box-shadow: $regForm-b-boxShadow;
+}
+.navbar-info{
+    background-color: #0a7791;
+}
+.text-light{
+    font-weight: $regFormHeadding-fw;
+    position: absolute;
+    left: $UeregFormHeadding-l;
+    font: {
+        family: $forum-ff;
+    }
+}
+#card{
+    width: 90%;
+    padding-right: 16%;
+}
+mat-label{
+    font: {
+        size: $regFormLabel-fs;
+        weight: $regFormLabel-fw;
+        family: $forum-ff;
+    }
+    color: #006a83;
+}
+.label{
+    position: absolute;
+}
+.label:hover{
+    color: #0a7791;
+}
+.field ::ng-deep .mat-form-field-flex>.mat-form-field-infix {
+    padding: 0.6em 0px !important;
+}
+
+.placehold{
+    font: {
+        size: $regFormLabel-fs;
+        family: $forum-ff;
+    }
+}
+.field{
+    width: $regFormField-w;
+}
+i{
+    font: {
+        size: $regFormIcon-fs;
+    }
+    position: absolute;
+}
+.pincode{
+    position: absolute;
+}
+
+.btn{
+    color: $regFormBtnColor;
+    background-color: #0a7791;
+    font: {
+        size: $regFormBtn-fs;
+        family: $forum-ff;
+    };
+    padding: 2%;
+    width: $regFormBtn-w;
+    border-radius: 10px;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+.captcha {
+    transform: scale(0.80);
+    -webkit-transform: scale(0.71);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
+
+
+
+
+h6{
+    font: {
+        family: $forum-ff;
+    }
+}
+.register{
+    font: {
+        family: $forum-ff;
+    }
+    color: $regFormBtnColor;
+    background-color: $regFormNavBackground;
+}
+.back{
+    font: {
+        family: $forum-ff;
+    }
+    color: $regFormBtnColor;
+    background-color: 	$regFormCancelBtnBackGround;
+}
+.rowreg{
+    margin-top: $registerBtn-mt;
+    margin-left: $registerBtn-ms;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.otpButton{
+    margin-right: $regenerateOTPBtn-me;
+    font: {
+        family: $forum-ff;
+    }
+    color: $regFormBtnColor;
+    background-color: $regFormNavBackground;
+}
+#second{
+    width: 95%;
+    padding-right: 20%;
+}
+p{
+    font: {
+        size: $regFormPTag-fs;
+    }
+    text-align: justify;
+}
+.col-xl-4{
+    width: $regSecondForm-xl-w;
+}
+
+
+@media screen and (max-width: 1357px){
+    .captcha{
+        transform: scale(0.68);
+        -webkit-transform: scale(0.68);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+    }
+    .rowreg{
+        display: block;
+        text-align: justify;
+    }
+    .back{
+        top: 10%;
+    }
+    .ps-5 {
+        padding-left: 0rem!important;
+    }
+    .flex{
+        display: block;
+    }
+}
+@media screen and (max-width: 1165px){
+    #card{
+        width: 100%;
+    }
+    #second{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 991px){
+    #card{
+        margin-left: 20%;
+        // padding-right: 12%;
+    }
+    .field ::ng-deep .mat-form-field-flex>.mat-form-field-infix {
+        padding: 0.8em 0px !important;
+    }
+    .flex{
+        display: flex;
+        flex-direction: row;
+    }
+    .captcha{
+        transform: scale(0.70);
+        -webkit-transform: scale(0.70);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+    }
+    .btn{
+        width: 100%;
+    }
+    #second{
+        margin-left: 20%;
+        padding-right: 16%;
+    }
+    .rowreg{
+        display: flex;
+        flex-direction: row;
+    }
+    .back{
+        top: 0%;
+    }
+    .ps-5{
+        padding-left: 13rem !important;
+    }
+}
+@media screen and (max-width: 767px){
+    #card{
+        margin-left: 12%;
+    }
+    mat-label{
+        font: {
+            size: 14px;
+        }
+    }
+    .placehold{
+        font: {
+            size: 14px;
+        }
+    }
+    #second{
+        margin-left: 12%;
+    }
+    .ps-5{
+        padding-left: 9rem !important;
+    }
+}
+@media screen and (max-width: 575px){
+    .flex{
+        display: block;
+    }
+    .btn{
+        width: 50%
+    }
+    .rowreg{
+        margin-left: 0%;
+    }
+    .text-light{
+        left: 30%;
+    }
+}
+@media screen and (max-width: 480px){
+    #card{
+        padding-right: 0%;
+        margin-left: 4%;
+    }
+    .btn{
+        width: 100%
+    }
+    mat-label{
+        font: {
+            size: 13px;
+        }
+    }
+    .placehold{
+        font: {
+            size: 13px;
+        }
+    }
+    .captcha{
+        transform: scale(0.64);
+        -webkit-transform: scale(0.64);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+    }
+    #second{
+        padding-right: 0%;
+        margin-left: 4%;
+    }
+    .rowreg{
+        display: block;
+    }
+    .ps-5{
+        padding-left: 0rem !important;
+    }
+    .register{
+        width: 100%;
+    }
+    .back{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .field{
+        width: 100%;
+    }
+    .captcha{
+        margin-left: 0%;
+    }
+}

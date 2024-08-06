@@ -1,0 +1,129 @@
+@import "src/styles.scss"; 
+
+.container{
+    left: $loginFormCard-ps;
+}
+.cardbot{
+    box-shadow: $card-b-boxShadow;
+}
+.navbar-info{
+    background-color: #0a7791;
+}
+.text-light{
+    font-weight: $loginFormHeadding-fw;
+    position: absolute;
+    left: $loginFormNavHeadding-ps;
+    font: {
+        family: $forum-ff;
+    }
+}
+#card{
+    width: 70%;
+    padding-right: 15%;
+}
+mat-label{
+    font: {
+        size: $labelFormLabel-fs;
+        family: $forum-ff;
+    }
+}
+.field ::ng-deep .mat-form-field-flex>.mat-form-field-infix {
+    padding: 0.6em 0px !important;
+}
+.placehold{
+    font: {
+        size: $labelFormLabel-fs;
+        family: $forum-ff;
+    }
+}
+.field{
+    width: 86%;
+}
+i{
+    font: {
+        size: $loginFormIcon-s;
+    }
+}
+.green{
+    color: 	$jadeGreen;
+}
+.blue{
+    color: 	$steelBlue;
+}
+
+p{
+    font: {
+        size: $labelFormLabel-fs;
+        family: $forum-ff;
+    }
+}
+a{
+    text-decoration: none;
+    font: {
+        size: $labelFormLabel-fs;
+        family: $forum-ff;
+    }
+}
+
+.btn{
+    color: $loginFormBtnColor;
+    background-color: #0a7791;
+    font: {
+        size: $loginFormBtn-fs;
+    }
+    width: 45%;
+}
+
+
+
+@media screen and (max-width: 1280px){
+    #card{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 991px){
+    #card{
+        margin-left: 22%;
+        padding-right: 0%;
+    }
+}
+@media screen and (max-width: 767px){
+    #card{
+        margin-left: 15%;
+    }
+    mat-label{
+        font: {
+            size: 14px;
+        }
+    }
+    .placehold{
+        font: {
+            size: 14px;
+        }
+    }
+}
+@media screen and (max-width: 480px){
+    #card{
+        width: 100%;
+        margin-left: 5%;
+    }
+    mat-label{
+        font: {
+            size: 13px;
+        }
+    }
+    .placehold{
+        font: {
+            size: 13px;
+        }
+    }
+    .field{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 390px){
+    .field{
+        width: 95%;
+    }
+}

@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #d6e5eb42}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: rgba(0,0,0,.25);
+}
+
+
+
+@import "~font-awesome/css/font-awesome.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+@import "src/styles/color.scss";
+@import "src/styles/border.scss";
+@import "src/styles/font.scss";
+@import "src/styles/margin.scss";
+@import "src/styles/padding.scss";
+@import "src/styles/others.scss";
+@import "src/styles/width-and-height.scss";

@@ -1,0 +1,87 @@
+@import "src/styles.scss";
+
+#cards{
+    text-align: center;
+  }
+h6{
+    font: {
+        family: $forum-ff;
+    }
+}
+//   #cards_landscape_wrap-2 .container{
+//     padding-top: 80px; 
+//     padding-bottom: 100px;
+//   }
+  #cards a{
+    text-decoration: none;
+    outline: none;
+  }
+  #cards .card-flyer {
+    border-radius: $cardBorderRadius;
+  }
+  #cards .card-flyer .image-box{
+    background: $imgBoxBackGround;
+    overflow: hidden;
+    box-shadow: $imgBoxShadow;
+    border-radius: $imgBoxBorderRadius;
+  }
+  #cards .card-flyer .image-box img{
+    -webkit-transition:all .9s ease; 
+    -moz-transition:all .9s ease; 
+    -o-transition:all .9s ease;
+    -ms-transition:all .9s ease; 
+    width: $cardImgWidth;
+    height: $cardImgHeight;
+  }
+  #cards .card-flyer:hover .image-box img{
+    opacity: $img-opacity;
+    -webkit-transform:scale(1.15);
+    -moz-transform:scale(1.15);
+    -ms-transform:scale(1.15);
+    -o-transform:scale(1.15);
+    transform:scale(1.15);
+  }
+  #cards .card-flyer .text-box{
+    text-align: center;
+  }
+  #cards .card-flyer .text-box .text-container{
+    padding: $cardText-p;
+  }
+  #cards .card-flyer{
+    background: $cardBackground;
+    margin-top: $card-mt;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    box-shadow: $card-boxShadow;
+  }
+  #cards .card-flyer:hover{
+    background: $cardHoverBackground;
+    box-shadow: $cardHover-boxShadow;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    margin-top: $cardHover-mt;
+  }
+  #cards .card-flyer .text-box p{
+    margin-top: $cardTxt-p-mt;
+    margin-bottom: $cardTxt-p-mb;
+    padding-bottom: $cardTxt-p-pb; 
+    font-size: $cardTxt-p-fs;
+    letter-spacing: $cardTxt-p-LS;
+    color: $cardTxt-p-color;
+  }
+  #cards .card-flyer .text-box h6{
+    margin-top: $cardTxt-h6-mt;
+    margin-bottom: $cardTxt-h6-mb; 
+    font-size: $cardTxt-h6-fs;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: $forum-ff;
+    letter-spacing: $cardTxt-h6-LS;
+    color: $cardTxt-h6-color;
+  }

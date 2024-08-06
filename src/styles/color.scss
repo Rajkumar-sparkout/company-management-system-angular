@@ -1,0 +1,70 @@
+$headerBlue: #1F3A51;
+$footerBlue: #366ea5;
+$greyBlue: #475e8b;
+// #283781 
+$logoGreen: #60D16B;
+$navTogglerGreen: #41A341; 
+$white: white;
+$amberYellow: #FFBF00;
+$cherryRed: #D2042D;
+$red: #FF4433;
+$jadeGreen: #2E8B57;
+$steelBlue: #4682B4;
+$hoverBlue: #0085ad;
+$midBlue: #4682B4;
+$whiteYellow: #F7F7F7;
+$lightWhite: #ffffff;
+$midWhite: #FFFFFF;
+$footerTxtWhite: #f0f9ff;
+$normalWhite: #fff;
+$naviBlack: #000000;
+$darkNavi: #001031;
+$privateNavBackground: rgb(2,0,36);
+$privateNav-LG-Background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(15,236,241,1) 100%);
+$dashboardNavLogoFont-color: #ffe307;
+$dimgray: dimgray;
+//navbar section
+$navMenuColor: $white;
+$navbarBackground: $headerBlue;
+$logoTextColor: $logoGreen;
+$navTogglerColor: $white;
+$navMenuHoverColor: $hoverBlue;
+$navMenuActiveColor: $amberYellow;
+
+//body card section
+$cardSectionBackground: $whiteYellow;
+$cardBackground: $midWhite;
+$imgBoxBackGround: $lightWhite;
+$cardHoverBackground: $normalWhite;
+$cardTxt-p-color: $naviBlack;
+$cardTxt-h6-color: $midBlue;
+
+//registration form section
+$regFormNavBackground: $greyBlue;
+$regFormBtnColor: $white;
+$regFormBtnBackGround: $greyBlue;
+$regFormCancelBtnBackGround: $red;
+
+//registration confirmation section
+$messageColor: $white;
+
+//login form section
+$loginFormNavBackground: $greyBlue;
+$loginFormBtnColor: $white;
+$loginFormBtnBackGround: $greyBlue;
+
+//footer section
+$footer-txtColor: $footerTxtWhite;
+$footerBackground: $footerBlue;
+$copyRightBackground: $headerBlue;
+$footerPTagColor: $white;
+$footerSocial-a-hover: $normalWhite;
+
+//dashboard section
+$sidenavBackground: $darkNavi;
+$sidenavIcon-MenuColor: $white;
+$sidenavMenuIconsColor: $white;
+$dashboardNavBackground: $privateNavBackground;
+$dashboardNav-LG-Background: $privateNav-LG-Background;
+$dashboardNavDropdownColor: $white;
+$dashboardNavDropdownListColor: $dimgray;

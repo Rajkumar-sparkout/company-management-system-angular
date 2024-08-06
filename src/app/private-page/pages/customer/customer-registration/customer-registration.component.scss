@@ -1,0 +1,48 @@
+@import "src/styles.scss"; 
+
+.cardbot{
+    box-shadow: $regForm-b-boxShadow;
+}
+.navbar-info{
+    background: rgb(7,50,83);
+    background: linear-gradient(90deg, rgba(7,50,83,1) 0%, rgba(98,170,255,1) 43%, rgba(209,232,255,1) 97%);
+}
+.navHeading{
+    font-weight: $regFormHeadding-fw;
+    position: absolute;
+    left: 46%;
+    font: {
+        family: $forum-ff;
+    }
+}
+.form-label{
+    font: {
+        size: 14px;
+        family: $forum-ff;
+    };
+}
+.sectionHeading{
+    font: {
+        size: 17px;
+        family: $forum-ff;
+    };
+    color: #297cf5;
+}
+.form-control.ng-touched.ng-invalid{
+    border: 1px solid red;
+}
+.create{
+    cursor: pointer;
+    padding: 1%;
+    border: none;
+    border-radius: 6px;
+    background-color: #8cb9fb;
+    color: white;
+}
+
+
+@media screen and (max-width: 575px){
+    .navHeading{
+        left: 37%;
+    }
+  }

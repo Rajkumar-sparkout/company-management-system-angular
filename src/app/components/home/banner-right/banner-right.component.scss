@@ -1,0 +1,18 @@
+@import "src/styles.scss";
+
+@media screen and (max-width: 1280px){
+    .image{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 991px){
+    .w-75{
+        width: 100%!important;
+        padding-left: 20%;
+    }
+}
+@media screen and (max-width: 991px){
+    .w-75{
+        padding-left: 12%;
+    }
+}

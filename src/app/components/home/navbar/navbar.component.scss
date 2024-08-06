@@ -1,0 +1,181 @@
+@import "src/styles.scss";
+
+.navbar{
+  background-color: #006a83;
+  height: 7.5vh;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px;
+}
+.navbar-brand{
+  padding-left: 12.5%;
+  font: {
+    weight: 600;
+    size: 24px;
+  }
+  font-family: $forum-ff;
+}
+.nav-link{
+  color: 	#9fd2e0 ; 
+}
+.nav-link:hover{
+  transition: all 0.5s ease-out;
+  color: 	#006a83;
+  background-color: #9fd2e0;
+  border-radius: 10px;
+}
+ul{
+  position: absolute;
+  right: 13%;
+  top: 20%;
+  font: {
+    size: 16px;
+    weight: 500;
+    family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  };
+}
+ul > li> a{
+  padding: 6px 20px;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+  color: 	#006a83;
+  background-color: #9fd2e0;
+}
+.dropdown-menu[data-bs-popper] {
+  top: 85%;
+  left: 65%;
+  padding-left: 0%;
+  color: #006a83;
+}
+.dropdown-item{
+  color: #006a83;
+}
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #006a83;
+  color: white;
+}
+.bi-list{
+  font-size: 28px;
+  position: absolute;
+  display: none;
+}
+.bi-x-lg{
+  font-size: 22px;
+}
+
+@media screen and (max-width: 1280px){
+  .navbar-brand{
+    padding-left: 4%;
+  }
+  ul{
+    right: 4%;
+  }
+  .navbar-toggler{
+    margin-right: 4%;
+  }
+}
+
+@media screen and (max-width: 991px){
+  .navbar-brand{
+    position: sticky;
+  }
+  .bi-list{
+    display: inline-block;
+    left: 92%;
+  }
+  .offcanvas-header{
+    background-color: #0a7791;
+  }
+  .offcanvas-body{
+    background-color: #0a7791;
+  }
+  ul{
+    top: 8%;
+    right: 63%;
+  }
+  li{
+    margin-bottom: 7%;
+  }
+}
+
+//media query for height
+
+@media screen and (max-height: 692px){
+  .navbar-toggler{
+    font-size: 18px;
+  }
+  .navbar{
+    height: 8.5vh;
+  }
+}
+@media screen and (max-height: 580px){
+  .navbar{
+    height: 9.5vh;
+  }
+}
+@media screen and (max-height: 500px){
+  .navbar{
+    height: 11.5vh;
+  }
+}
+@media screen and (max-height: 424px){
+  .navbar{
+    height: 12.5vh;
+  }
+}
+
+
+
+//old navbar start
+
+//   .navbar-nav .nav-link.active{
+//     color: $navMenuActiveColor;
+//   }
+//   .navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+//     color: $navMenuActiveColor;
+    
+//   }
+//  .active{
+//     --bs-dropdown-link-active-bg: #FFBF00;
+
+//   .navbar-expand-lg .navbar-nav .dropdown-menu {
+//     left: $menuDropdown-l;
+//     top: $menuDropdown-t;
+//     font: {
+//       size: $navLink-fs;
+//       family: $forum-ff;
+//   }
+//   }
+
+
+//old navbar end
+
+
+
+//chat gpt start
+.side-nav {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 1;
+}
+
+ a {
+  padding: 15px 25px;
+  text-align: left;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  // display: block;
+  transition: 0.3s;
+}
+
+.side-nav a:hover {
+  background-color: #555;
+}
+
+//chat gpt end

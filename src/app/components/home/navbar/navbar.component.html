@@ -1,0 +1,204 @@
+
+<app-social-media></app-social-media>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">Smart BU2C</a>
+    <i class="bi bi-list" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" [style.color]="color"></i>
+    <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
+    <div class="collapse d-lg-block sidebar collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li>
+          <button mat-button class="nav-link" aria-current="page" [routerLink]="'/home'"
+            routerLinkActive="active">
+            Home
+          </button>
+        </li>
+        <li>
+          <button mat-button class="ms-2 nav-link" [routerLink]="'/aboutUs'"
+            routerLinkActive="active">
+            About
+          </button>
+        </li>
+        <li>
+          <button mat-button class="ms-2 nav-link" [routerLink]="'/Services'"
+            routerLinkActive="active">
+            Services
+          </button>
+        </li>
+        <li>
+          <button mat-button class="ms-2 nav-link" [routerLink]="'/Services'"
+            routerLinkActive="active">
+            Portfolio
+          </button>
+        </li>
+        <li>
+          <button mat-button class="ms-2 nav-link" [routerLink]="'/Services'"
+            routerLinkActive="active">
+            Team
+          </button>
+        </li>
+        <li>
+          <button mat-button class="ms-2 nav-link" [routerLink]="'/createNewPassword'"
+            routerLinkActive="active">
+            Blog
+          </button>
+        </li>
+        <li>
+          <button mat-button id="btnGroupDrop1" class="ms-2 nav-link dropdown-toggle" data-bs-toggle="dropdown" 
+             routerLinkActive="active" aria-expanded="false">
+            Register
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <li><a class="dropdown-item" [routerLink]="'/businessUserRegister'" routerLinkActive="active">Business User</a></li>
+            <li><a class="dropdown-item" [routerLink]="'/userRegister'" routerLinkActive="active">User</a></li>
+          </ul>
+        </li>
+        <li>
+          <button mat-button class="ms-2 nav-link" [routerLink]="'/businessUserLogin'"
+            routerLinkActive="active">
+            Login
+          </button>
+        </li>
+        <li>
+          <button mat-button class="ms-2 nav-link" [routerLink]="'/Services'"
+            routerLinkActive="active">
+            Contact
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" *ngIf="isMenuOpen ">
+<div class="offcanvas-header">
+  <i class="bi bi-x-lg pt-2" data-bs-dismiss="offcanvas" aria-label="Close" [style.color]="color"></i>
+</div>
+<div class="offcanvas-body">
+  <ul class="navbar-nav">
+      <li>
+        <button mat-button class="nav-link" aria-current="page" [routerLink]="'/home'"
+          routerLinkActive="active">
+          Home
+        </button>
+      </li>
+      <li>
+        <button mat-button class="nav-link" [routerLink]="'/aboutUs'"
+          routerLinkActive="active">
+          About
+        </button>
+      </li>
+      <li>
+        <button mat-button class="nav-link" [routerLink]="'/Services'"
+          routerLinkActive="active">
+          Services
+        </button>
+      </li>
+      <li>
+        <button mat-button class="nav-link" [routerLink]="'/Services'"
+          routerLinkActive="active">
+          Portfolio
+        </button>
+      </li>
+      <li>
+        <button mat-button class="nav-link" [routerLink]="'/Services'"
+          routerLinkActive="active">
+          Team
+        </button>
+      </li>
+      <li>
+        <button mat-button class="nav-link" [routerLink]="'/createNewPassword'"
+          routerLinkActive="active">
+          Blog
+        </button>
+      </li>
+      <li>
+        <button mat-button id="btnGroupDrop1" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" 
+           routerLinkActive="active" aria-expanded="false">
+          Register
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <li><a class="dropdown-item" [routerLink]="'/businessUserRegister'" routerLinkActive="active">Business User</a></li>
+          <li><a class="dropdown-item" [routerLink]="'/userRegister'" routerLinkActive="active">User</a></li>
+        </ul>
+      </li>
+      <li>
+        <button mat-button class="nav-link" [routerLink]="'/businessUserLogin'"
+          routerLinkActive="active">
+          Login
+        </button>
+      </li>
+      <li>
+        <button mat-button class="nav-link" [routerLink]="'/Services'"
+          routerLinkActive="active">
+          Contact
+        </button>
+      </li>
+    </ul>
+</div>
+</div>
+
+<!-- <nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">Smart BU2C</a>
+    <i class="bi bi-list navbar-toggler" [style.color]="color" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" 
+    aria-expanded="false" aria-label="Toggle navigation"></i>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li>
+          <button mat-button class="nav-link" aria-current="page" [routerLink]="'/home'"
+            routerLinkActive="active">
+            Home
+          </button>
+        </li>
+        <li>
+          <button mat-button class="nav-link" [routerLink]="'/aboutUs'"
+            routerLinkActive="active">
+            About
+          </button>
+        </li>
+        <li>
+          <button mat-button class="nav-link" [routerLink]="'/Services'"
+            routerLinkActive="active">
+            Services
+          </button>
+        </li>
+        <li>
+          <button mat-button class="nav-link" [routerLink]="'/Services'"
+            routerLinkActive="active">
+            Portfolio
+          </button>
+        </li>
+        <li>
+          <button mat-button class="nav-link" [routerLink]="'/Services'"
+            routerLinkActive="active">
+            Team
+          </button>
+        </li>
+        <li>
+          <button mat-button class="nav-link" [routerLink]="'/Services'"
+            routerLinkActive="active">
+            Blog
+          </button>
+        </li>
+        <li>
+          <button mat-button id="btnGroupDrop1" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" 
+             routerLinkActive="active" aria-expanded="false">
+            Register
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <li><a class="dropdown-item" [routerLink]="'/businessUserRegister'" routerLinkActive="active">Business User</a></li>
+            <li><a class="dropdown-item" [routerLink]="'/userRegister'" routerLinkActive="active">User</a></li>
+          </ul>
+        </li>
+        <li>
+          <button mat-button class="nav-link" [routerLink]="'/Services'"
+            routerLinkActive="active">
+            Contact
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->

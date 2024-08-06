@@ -1,0 +1,282 @@
+@import "src/styles.scss"; 
+
+.cardbot{
+    box-shadow: $regForm-b-boxShadow;
+}
+.navbar-info{
+    background-color: #0a7791;
+}
+.text-light{
+    font-weight: $regFormHeadding-fw;
+    position: absolute;
+    left: 27%;
+    font: {
+        family: $forum-ff;
+    }
+}
+#card{
+    width: 90%;
+    padding-right: 16%;
+}
+mat-label{
+    font: {
+        size: $regFormLabel-fs;
+        weight: $regFormLabel-fw;
+        family: $forum-ff;
+    }
+    color: #006a83;
+}
+.label{
+    position: absolute;
+}
+.label:hover{
+    color: #0a7791;
+}
+.field ::ng-deep .mat-form-field-flex>.mat-form-field-infix {
+    padding: 0.6em 0px !important;
+}
+
+.placehold{
+    font: {
+        size: $regFormLabel-fs;
+        family: $forum-ff;
+    }
+}
+.field{
+    width: $regFormField-w;
+}
+i{
+    font: {
+        size: $regFormIcon-fs;
+    }
+    position: absolute;
+}
+.pincode{
+    position: absolute;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+.next{
+    padding: 1%;
+    width: 45%;
+    margin-left: 48%;
+    border-radius: 10px;
+    background-color: #0a7791;
+    color: white;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn{
+    color: $regFormBtnColor;
+    background-color: #0a7791;
+    font: {
+        size: 15px;
+        family: $forum-ff;
+    };
+    padding: 2%;
+    width: 85%;
+    border-radius: 10px;
+}
+
+.captcha {
+    transform: scale(0.80);
+    -webkit-transform: scale(0.71);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
+
+
+
+h6{
+    font: {
+        family: $forum-ff;
+    }
+}
+.register{
+    font: {
+        family: $forum-ff;
+    }
+    color: $regFormBtnColor;
+    background-color: #0a7791;
+    position: absolute;
+    right: 22%;
+}
+.back{
+    font: {
+        family: $forum-ff;
+    }
+    color: $regFormBtnColor;
+    background-color: 	$regFormCancelBtnBackGround;
+}
+.rowreg{
+    margin-top: $registerBtn-mt;
+    margin-left: $registerBtn-mt;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.otpButton{
+    margin-right: 25%;
+    font: {
+        family: $forum-ff;
+    }
+    color: $regFormBtnColor;
+    background-color: #0a7791;
+}
+#second{
+    width: 95%;
+    padding-right: 20%;
+}
+p{
+    font: {
+        size: $regFormPTag-fs;
+    }
+    text-align: justify;
+}
+.col-xl-4{
+    width: $regSecondForm-xl-w;
+}
+
+
+@media screen and (max-width: 1629px){
+    .flex{
+        display: block;
+    }
+}
+@media screen and (max-width: 1357px){
+    .captcha{
+        transform: scale(0.68);
+        -webkit-transform: scale(0.68);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+      }
+      .rowreg{
+        display: block;
+        text-align: justify;
+      }
+      .back{
+        margin-top: 30%;
+      }
+}
+@media screen and (max-width: 1165px){
+    #card{
+        width: 100%;
+    }
+    #second{
+        width: 100%;
+        padding-right: 15%;
+    }
+}
+@media screen and (max-width: 991px){
+    .field ::ng-deep .mat-form-field-flex>.mat-form-field-infix {
+        padding: 0.8em 0px !important;
+    }
+    .captcha{
+        transform: scale(0.70);
+        -webkit-transform: scale(0.70);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+    }
+    .btn{
+        width: 100%;
+    }
+    #card{
+        margin-left: 20%;
+    }
+    .rowreg{
+        display: flex;
+        text-align: justify;
+      }
+      .back{
+        margin-top: auto;
+      }
+    #second{
+        margin-left: 20%;
+    }
+    .register{
+        right: 25%
+    }
+    .flex{
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media screen and (max-width: 767px){
+    mat-label{
+        font: {
+            size: 14px;
+        }
+    }
+    .placehold{
+        font: {
+            size: 14px;
+        }
+    }
+    #card{
+        margin-left: 12%;
+    }
+    #second{
+        margin-left: 12%;
+    }
+    .flex{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .rowreg{
+        margin-left: 0%;
+    }
+    .text-light{
+        left: 18%;
+    }
+}
+@media screen and (max-width: 480px){
+    mat-label{
+        font: {
+            size: 13px;
+        }
+    }
+    .placehold{
+        font: {
+            size: 13px;
+        }
+    }
+    #card{
+        padding-right: 0%;
+        margin-left: 5%;
+    }
+    .rowreg{
+        display: block;
+        text-align: justify;
+    }
+    .back{
+        margin-top: 15%;
+        width: 100%;
+    }
+    .register{
+        width: 86%;
+        left: 7%;
+    }
+    #second{
+        padding-right: 0%;
+        margin-left: 5%;
+    }
+    .captcha{
+        transform: scale(0.64);
+        -webkit-transform: scale(0.64);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+    }   
+}
+
+@media screen and (max-width: 390px){
+    .field{
+        width: 100%;
+    }
+    .captcha{
+        margin-left: 0%;
+    }
+}

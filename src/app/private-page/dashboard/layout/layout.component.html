@@ -1,0 +1,297 @@
+<mat-toolbar class="example-toolbar p-2 sticky-top">
+  <div class="d-flex nav-logo ms-1">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/svg_logo.png" class="pt-1"
+    /></a>
+    <h6 class="bu2c" *ngIf="isExpanded || isShowing">Smart BU2C</h6>
+  </div>
+  <button mat-icon-button (click)="isExpanded = !isExpanded" class="ms-2">
+    <mat-icon class="menu nav-icon">menu</mat-icon>
+  </button>
+  <!-- <div class="input-group w-25">
+    <button
+      mat-icon-button
+      class="example-icon search"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon class="nav-icon">search</mat-icon>
+    </button>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search"
+      aria-label="Search"
+      aria-describedby="basic-addon1"
+    />
+  </div> -->
+  <span class="example-spacer"></span>
+  <div class="nav-right">
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon me-4"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon class="nav-icon">notifications</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon me-4"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon class="nav-icon">settings</mat-icon>
+    </button>
+    <div class="btn-group me-5">
+      <button
+        type="button"
+        class="btn dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img
+          src="../../../../assets/images/profile.jpg"
+          alt=""
+          class="profile me-2"
+        />
+        <span class="profile-name"> Abdus Salam</span>
+      </button>
+      <ul class="dropdown-menu">
+        <li>
+          <a class="dropdown-item" href="#"
+            ><i class="bi bi-person-fill drop-icon me-3"></i>My Profile</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="#"
+            ><i class="bi bi-envelope drop-icon me-3"></i>Message</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="#"
+            ><i class="bi bi-gem drop-icon me-3"></i>Projects</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="#"
+            ><i class="bi bi-gear-fill drop-icon me-3"></i>Settings</a
+          >
+        </li>
+        <li><hr class="dropdown-divider" /></li>
+        <li>
+          <a class="dropdown-item" href="#"
+            ><i class="bi bi-box-arrow-right drop-icon me-3"></i>Logout</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</mat-toolbar>
+<mat-sidenav-container class="example-container sticky-top" autosize>
+  <mat-sidenav
+    #sidenav
+    class="example-sidenav ps-0"
+    mode="side"
+    opened="true"
+    (mouseenter)="mouseenter()"
+    (mouseleave)="mouseleave()"
+    *ngIf="!wantToShow"
+  >
+    <div
+      class="dashboardDiv"
+      routerLinkActive="activeRouter == dashboard"
+      [routerLink]="'dashboard'"
+    >
+      <p class="dashboard mt-3 ms-3 text-white" *ngIf="isExpanded || isShowing">
+        <span class="me-3"><i class="bi bi-grid"></i></span> Dashboard
+      </p>
+    </div>
+    <div>
+      <mat-nav-list>
+        <mat-list-item
+          (click)="showSubmenu = !showSubmenu"
+          class="parent"
+          [routerLink]="'customer-registration'"
+          routerLinkActive="active"
+        >
+          <mat-icon mat-list-icon class="me-2 menu-icon">person</mat-icon>
+          <span
+            class="full-width"
+            *ngIf="isExpanded || isShowing"
+            (click)="isExpanded = isExpanded"
+            >Create Customer</span
+          >
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+    <div>
+      <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+          <mat-icon mat-list-icon class="me-2 menu-icon"
+            >linked_services</mat-icon
+          >
+          <span
+            class="full-width"
+            *ngIf="isExpanded || isShowing"
+            (click)="isExpanded = isExpanded"
+            >Service</span
+          >
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+    <div>
+      <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+          <mat-icon mat-list-icon class="me-2 menu-icon"
+            >watch_screentime
+          </mat-icon>
+          <span
+            class="full-width"
+            *ngIf="isExpanded || isShowing"
+            (click)="isExpanded = isExpanded"
+            >Business Hours</span
+          >
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+    <div>
+      <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+          <mat-icon mat-list-icon class="me-2 menu-icon"
+            >support_agent</mat-icon
+          >
+          <span
+            class="full-width"
+            *ngIf="isExpanded || isShowing"
+            (click)="isExpanded = isExpanded"
+            >Agents</span
+          >
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+    <div>
+      <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+          <mat-icon mat-list-icon class="me-2 menu-icon">send</mat-icon>
+          <span
+            class="full-width"
+            *ngIf="isExpanded || isShowing"
+            (click)="isExpanded = isExpanded"
+            >Sent Email</span
+          >
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+    <div>
+      <mat-nav-list class="logout">
+        <mat-list-item (click)="logout()">
+          <mat-icon mat-list-icon class="me-2 menu-icon">logout</mat-icon>
+          <span class="full-width" *ngIf="isExpanded || isShowing">logout</span>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav
+    #sidenav
+    class="example-sidenav ps-0"
+    mode="over"
+    opened="true"
+    (mouseenter)="mouseenter()"
+    (mouseleave)="mouseleave()"
+    *ngIf="wantToShow && isExpanded"
+  >
+    <div class="customer">
+      <p class="dashboard ms-5" *ngIf="isExpanded || isShowing">dashboard</p>
+    </div>
+    <div class="customer">
+      <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+          <mat-icon mat-list-icon class="me-2 menu-icon">person</mat-icon>
+          <span
+            class="full-width"
+            *ngIf="isExpanded || isShowing"
+            (click)="isExpanded = isExpanded"
+            >Create Customer</span
+          >
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+    <div>
+      <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+          <mat-icon mat-list-icon class="me-2 menu-icon"
+            >linked_services</mat-icon
+          >
+          <span
+            class="full-width"
+            *ngIf="isExpanded || isShowing"
+            (click)="isExpanded = isExpanded"
+            >Service</span
+          >
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+    <div>
+      <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+          <mat-icon mat-list-icon class="me-2 menu-icon"
+            >watch_screentime
+          </mat-icon>
+          <span
+            class="full-width"
+            *ngIf="isExpanded || isShowing"
+            (click)="isExpanded = isExpanded"
+            >Business Hours</span
+          >
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+    <div>
+      <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+          <mat-icon mat-list-icon class="me-2 menu-icon"
+            >support_agent</mat-icon
+          >
+          <span
+            class="full-width"
+            *ngIf="isExpanded || isShowing"
+            (click)="isExpanded = isExpanded"
+            >Agents</span
+          >
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+    <div>
+      <mat-nav-list>
+        <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+          <mat-icon mat-list-icon class="me-2 menu-icon">send</mat-icon>
+          <span
+            class="full-width"
+            *ngIf="isExpanded || isShowing"
+            (click)="isExpanded = isExpanded"
+            >Sent Email</span
+          >
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+    <div>
+      <mat-nav-list class="logout">
+        <mat-list-item
+          [routerLink]="'/'"
+          routerLinkActive="active"
+          (click)="logout()"
+        >
+          <mat-icon mat-list-icon class="me-2 menu-icon">logout</mat-icon>
+          <span class="full-width" *ngIf="isExpanded || isShowing">logout</span>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<div class="text-center text-white copyright p-3 w-100">
+  © 2021 Copyright:
+  <a class="text-reset fw-bold" href="https://www.smartansys.com/"
+    >SmartanSys.com</a
+  >
+</div>

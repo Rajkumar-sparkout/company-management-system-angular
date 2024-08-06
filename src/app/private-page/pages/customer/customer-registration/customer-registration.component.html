@@ -1,0 +1,317 @@
+<!-- <div>
+  <div class="pt-4 mb-4" id="card">
+    <nav class="navbar navbar-info p-3">
+      <div class="container">
+        <a class="navbar-brand" href="#"> </a>
+      </div>
+      <h6 class="text-center fs-6 text-light mt-2">
+        Customer Registration Form
+      </h6>
+    </nav>
+    <mat-card class="cardbot">
+      <form class="example-form text-center" [formGroup]="customerForm">
+        <div class="row px-3 pt-3">
+          <div class="col-xl-6 col-lg-6">
+            <mat-label class="label">Customer Number</mat-label>
+            <mat-form-field class="field mt-4" appearance="outline">
+              <input
+                matInput
+                type="name"
+                class="placehold"
+                formControlName="customerNumber"
+              />
+            </mat-form-field>
+          </div>
+          <div class="col-xl-6 col-lg-6">
+            <mat-label class="label">Customer Name</mat-label>
+            <mat-form-field class="field mt-4" appearance="outline">
+              <input
+                type="name"
+                matInput
+                class="placehold"
+                formControlName="customerName"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row px-3">
+          <div class="col-sm-12 col-lg-12">
+            <mat-label class="label">Mailing Address</mat-label>
+            <mat-form-field class="field mt-4" appearance="outline">
+              <input
+                type="name"
+                matInput
+                class="placehold"
+                placeholder="Street Address"
+                formControlName="address"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row px-3">
+          <div class="col-xl-6 col-lg-6">
+            <mat-form-field class="field" appearance="outline">
+              <input
+                type="name"
+                matInput
+                class="placehold"
+                placeholder="City"
+                formControlName="city"
+              />
+            </mat-form-field>
+          </div>
+          <div class="col-xl-6 col-lg-6">
+            <mat-form-field class="field" appearance="outline">
+              <mat-select
+                class="placehold"
+                placeholder="Country"
+                formControlName="country"
+              >
+                <mat-option
+                  *ngFor="let country of listOfCountries"
+                  [value]="country.country_code"
+                  >{{ country.country }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row px-3">
+          <div class="col-xl-6 col-lg-6">
+            <mat-form-field class="field" appearance="outline">
+              <mat-select
+                class="placehold"
+                placeholder="State"
+                formControlName="state"
+                (click)="getStates()"
+              >
+                <mat-option
+                  *ngFor="let state of listOfStates"
+                  [value]="state.state_code"
+                  >{{ state.state }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-xl-6 col-lg-6">
+            <mat-form-field class="field" appearance="outline">
+              <input
+                type="name"
+                matInput
+                class="placehold"
+                placeholder="Zip Code"
+                formControlName="zipCode"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row px-3">
+          <div class="col-xl-6 col-lg-6">
+            <mat-label class="label"> Email</mat-label>
+            <mat-form-field class="field mt-4" appearance="outline">
+              <input
+                type="name"
+                matInput
+                class="placehold"
+                formControlName="email"
+              />
+            </mat-form-field>
+          </div>
+          <div class="col-xl-6 col-lg-6">
+            <mat-label class="label"> Phone Number</mat-label>
+            <mat-form-field class="field mt-4" appearance="outline">
+              <input
+                type="name"
+                matInput
+                class="placehold"
+                formControlName="mobileNumber"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row px-3">
+          <div class="col-sm-12 col-lg-12">
+            <mat-label class="label"> Whatsapp Number</mat-label>
+            <mat-form-field class="field mt-4" appearance="outline">
+              <input
+                type="name"
+                matInput
+                class="placehold"
+                placeholder="Whatsapp Number"
+                formControlName="whatsappNumber"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="flex px-3">
+          <div class="col-xl-6 col-lg-6">
+            <div class="pb-1 captcha pt-2">
+              <ngx-recaptcha2
+                [siteKey]="siteKey"
+                [type]="type"
+                formControlName="captcha"
+              ></ngx-recaptcha2>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6">
+            <button
+              class="btn mt-2"
+              mat-raised-button
+              [disabled]="customerForm.invalid"
+              (click)="createCustomer()"
+            >
+              Create
+            </button>
+          </div>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div> -->
+
+<nav class="navbar navbar-info p-3 mx-4 mt-3">
+  <div class="container">
+    <a class="navbar-brand" href="#"> </a>
+  </div>
+  <h6 class="text-center fs-6 text-light navHeading mt-2">Create Customer</h6>
+</nav>
+<div class="card mx-4 px-3">
+  <div class="card-body">
+    <form [formGroup]="customerForm">
+      <div class="row">
+        <div class="col-sm-6 col-lg-6">
+          <p class="sectionHeading">Personal Dtails</p>
+          <div class="row">
+            <div class="col-sm-12 col-lg-6">
+              <div class="mb-3">
+                <label class="form-label">First Name</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="firstName"
+                />
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <div class="mb-3">
+                <label class="form-label">Last Name</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="lastName"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-lg-6">
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="email"
+                />
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <div class="mb-3">
+                <label class="form-label">Mobile Number</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="mobileNumber"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-lg-12">
+              <div class="mb-3">
+                <label class="form-label">Whatsapp Number</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="whatsappNumber"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-6">
+          <p class="sectionHeading">Address</p>
+          <div class="row">
+            <div class="col-sm-12 col-lg-12">
+              <div class="mb-3">
+                <label class="form-label">mailing Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="address"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-lg-6">
+              <div class="mb-3">
+                <label class="form-label">City</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="city"
+                />
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <div class="mb-3">
+                <label class="form-label">Country</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="country"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-lg-6">
+              <div class="mb-3">
+                <label class="form-label">State</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="state"
+                />
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <div class="mb-3">
+                <label class="form-label">Zip Code</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  formControlName="zipCode"
+                />
+                <button
+                  class="create mt-4 w-100"
+                  mat-raised-button
+                  [disabled]="customerForm.invalid"
+                  (click)="createCustomer()"
+                >
+                  Create
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
